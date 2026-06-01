@@ -294,12 +294,12 @@
 
   /* ---------- WHY list ---------- */
   var whys = [
-    ["Unparalleled Expertise",     "Leverage our extensive experience across a wide range of industry sectors."],
-    ["Global Reach, Local Focus",  "International expertise delivered with local understanding, with offices and partners worldwide."],
-    ["Safety-First Approach",      "We prioritise safety in every project, ensuring a risk-free environment for all stakeholders."],
-    ["Exceptional Quality",        "An unwavering commitment to meeting and exceeding international quality benchmarks."],
-    ["Commitment to Innovation",   "We continuously seek ways to improve processes and implement cutting-edge solutions."],
-    ["Agile &amp; Adaptable",      "Well-equipped to navigate the ever-changing demands of the industrial landscape."]
+    ["Safety as a Precondition",      "Every scope starts and ends with HSE. We plan for zero harm, brief every shift, and measure ourselves on getting people home safely."],
+    ["Turnaround &amp; Shutdown Discipline", "Tightly sequenced execution where every discipline and contractor works to one integrated plan, so your window closes on schedule."],
+    ["Quality Held to Standard",      "Work delivered under ISO 9001 systems and international benchmarks, with documented QA/QC at every hold point."],
+    ["Global Reach, Local Crews",     "International engineering capability delivered by teams who understand your site, your permits and your regulators."],
+    ["Engineering the Hard Scopes",   "The complex, high-consequence work others decline, delivered with the right method statements and competent people."],
+    ["Built to Respond",              "24/7 emergency capability and the flexibility to mobilise quickly when your operation cannot wait."]
   ];
 
   (function buildWhy() {
@@ -430,9 +430,11 @@
 
   readMotion();
   frame();
-  requestAnimationFrame(idle);
+  // Autonomous (non-scroll) motion only runs when the user hasn't asked to reduce motion.
+  // Scroll-driven transforms always run because the user controls them directly.
+  if (!prefersReduced) requestAnimationFrame(idle);
 
-  // Expose for tweaks app
+  // Expose for live refresh hooks
   window.__prommacRefresh = function () { readMotion(); frame(); };
 
   /* ============================================================
