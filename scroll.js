@@ -486,4 +486,13 @@
     });
   })();
 
+  /* ============================================================
+     GRACEFUL IMAGE FALLBACK
+     If a capability photo fails to load, hide it so the styled
+     frame and caption stay clean (no broken-image icon).
+     ============================================================ */
+  [].slice.call(document.querySelectorAll(".ph img")).forEach(function (img) {
+    img.addEventListener("error", function () { img.style.display = "none"; });
+  });
+
 })();
