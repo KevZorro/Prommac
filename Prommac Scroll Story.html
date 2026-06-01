@@ -4,12 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Prommac — Innovate. Construct. Solve.</title>
+<meta name="description" content="Prommac is a global industrial services company delivering maintenance, shutdowns, complex projects and precision machining across 20+ countries since 2005." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-type="industrial" data-vibe="precision">
+
+<!-- Skip navigation (accessibility) -->
+<a class="skip-nav" href="#top">Skip to main content</a>
 
 <div class="scroll-prog" id="scrollProg"></div>
 
@@ -24,8 +28,20 @@
     <a href="#why">Why Prommac</a>
     <a class="nav-cta" href="#contact">Contact us</a>
   </div>
-  <div class="nav-burger"><span></span><span></span><span></span></div>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMobile">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="#about"        class="nav-mobile-link">About</a>
+  <a href="#reach"        class="nav-mobile-link">Global</a>
+  <a href="#industries"   class="nav-mobile-link">Industries</a>
+  <a href="#capabilities" class="nav-mobile-link">Capabilities</a>
+  <a href="#why"          class="nav-mobile-link">Why Prommac</a>
+  <a href="#contact"      class="nav-mobile-cta nav-mobile-link">Contact us</a>
+</div>
 
 <!-- ============ CH.1 HERO ============ -->
 <section class="hero" id="top" data-screen-label="Hero">
@@ -53,7 +69,7 @@
       <div class="cell"><div class="num" data-count="24" data-suffix="/7">0</div><div class="lbl">Emergency response</div></div>
     </div>
 
-    <div class="hero-cue"><span>Scroll</span><div class="bar"></div></div>
+    <div class="hero-cue"><div class="bar"></div></div>
   </div>
 </section>
 
@@ -65,7 +81,7 @@
       <blockquote class="mantra-quote" id="mantraQuote"></blockquote>
       <div class="mantra-attr" id="mantraAttr">
         <div class="ava">DdB</div>
-        <div class="who"><b>Dany de Barros</b><span>Chief Executive Officer — on the words of Jason English</span></div>
+        <div class="who"><b>Dany de Barros</b><span>Chief Executive Officer, in the words of Jason English</span></div>
       </div>
     </div>
   </div>
@@ -76,27 +92,27 @@
   <div class="tri-stage">
     <div class="tri-track" id="triTrack">
       <div class="tri-panel">
-        <div class="idx">01 — OUR COMMITMENT</div>
+        <div class="idx">01 · OUR COMMITMENT</div>
         <div class="tri-ghost">PAST</div>
         <div class="tri-card">
           <h3>Reviving <em>the&nbsp;Past</em></h3>
-          <p>We harness the wisdom of decades on the tools — hard-won lessons from maintenance, turnarounds and complex builds — and carry them into every new project.</p>
+          <p>We harness the wisdom of decades on the tools. Hard-won lessons from maintenance, turnarounds and complex builds, carried into every new project.</p>
         </div>
       </div>
       <div class="tri-panel">
-        <div class="idx">02 — OUR COMMITMENT</div>
+        <div class="idx">02 · OUR COMMITMENT</div>
         <div class="tri-ghost">PRESENT</div>
         <div class="tri-card">
           <h3>Maintaining <em>the&nbsp;Present</em></h3>
-          <p>Operational excellence, today. We keep facilities running safely and efficiently across petrochemical, oil &amp; gas, power and beyond — on time, every time.</p>
+          <p>Operational excellence, today. We keep facilities running safely and efficiently across petrochemical, oil &amp; gas, power and beyond. On time, every time.</p>
         </div>
       </div>
       <div class="tri-panel">
-        <div class="idx">03 — OUR COMMITMENT</div>
+        <div class="idx">03 · OUR COMMITMENT</div>
         <div class="tri-ghost">FUTURE</div>
         <div class="tri-card">
           <h3>Building <em>the&nbsp;Future</em></h3>
-          <p>Relentless innovation isn't optional — it's survival. We invest in our people and push the boundary of what precision engineering can deliver.</p>
+          <p>Relentless innovation isn't optional; it's survival. We invest in our people and push the boundary of what precision engineering can deliver.</p>
         </div>
       </div>
     </div>
@@ -111,7 +127,7 @@
     <div class="reach-copy">
       <div class="eyebrow">Global experience · local advantage</div>
       <h2>One team,<br>across the&nbsp;map.</h2>
-      <p>Our highly skilled team tackles complex challenges across more than 20 countries — bringing global precision machining and custom manufacturing expertise to your doorstep.</p>
+      <p>Our highly skilled team tackles complex challenges across more than 20 countries, bringing global precision machining and custom manufacturing expertise to your doorstep.</p>
       <div class="reach-stats">
         <div class="s"><div class="n"><span data-count="20" data-suffix="">0</span><span class="accent">+</span></div><div class="l">Countries</div></div>
         <div class="s"><div class="n"><span data-count="20" data-suffix="">0</span><span class="accent">+</span></div><div class="l">Clients trust us</div></div>
@@ -129,11 +145,57 @@
   <div class="wrap">
     <div class="ind-head">
       <h2>Sectors<br>we&nbsp;serve</h2>
-      <p>Prommac is your one-stop shop for a comprehensive range of industrial services, catering to diverse industry needs.</p>
+      <p>Prommac is your one-stop partner for a comprehensive range of industrial services, built for the demands of complex operations.</p>
     </div>
     <div class="ind-grid" id="indGrid"></div>
   </div>
 </section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-bar" aria-label="Credentials and certifications">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="t-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+      <div class="t-label"><strong>ISO 9001</strong>Quality Management</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="t-label"><strong>OHSAS 18001</strong>Safety &amp; Health</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4" ry="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        </svg>
+      </div>
+      <div class="t-label"><strong>20+ Countries</strong>Global Operations</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="t-label"><strong>24/7 Response</strong>Emergency Available</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div class="t-label"><strong>Est. 2005</strong>20+ Years of Service</div>
+    </div>
+  </div>
+</div>
 
 <!-- ============ CH.6 CAPABILITIES ============ -->
 <section class="cap" id="capabilities" data-screen-label="Capabilities">
@@ -147,32 +209,32 @@
       <div class="cap-step active" data-num="01" data-title="Maintenance<br>&amp; Reliability">
         <div class="k">Keep it running</div>
         <h3>Maintenance &amp; Reliability</h3>
-        <p>Planned and predictive maintenance that keeps your facilities operating smoothly and efficiently — minimising downtime and extending asset life.</p>
-        <div class="ph" data-label="Photo — maintenance crew on site"></div>
+        <p>Planned and predictive maintenance that keeps your facilities operating smoothly and efficiently, minimising downtime and extending asset life.</p>
+        <div class="ph" data-label="Photo: maintenance crew on site"></div>
       </div>
       <div class="cap-step" data-num="02" data-title="Shutdowns<br>&amp; Turnarounds">
         <div class="k">Plan · execute · restart</div>
         <h3>Shutdowns &amp; Turnarounds</h3>
-        <p>Tightly managed turnarounds where every discipline and contractor executes to plan — making even the most complex shutdown easier to manage.</p>
-        <div class="ph" data-label="Photo — plant turnaround"></div>
+        <p>Tightly managed turnarounds where every discipline and contractor executes to plan, making even the most complex shutdown easier to manage.</p>
+        <div class="ph" data-label="Photo: plant turnaround"></div>
       </div>
       <div class="cap-step" data-num="03" data-title="Complex<br>Projects">
         <div class="k">Engineer the hard stuff</div>
         <h3>Complex Projects</h3>
-        <p>Innovative solutions for the projects others walk away from — delivered with safety, quality and on-time completion as non-negotiables.</p>
-        <div class="ph" data-label="Photo — large project build"></div>
+        <p>Innovative solutions for the projects others walk away from, delivered with safety, quality and on-time completion as non-negotiables.</p>
+        <div class="ph" data-label="Photo: large project build"></div>
       </div>
       <div class="cap-step" data-num="04" data-title="Precision<br>Machining">
         <div class="k">Tolerance you can trust</div>
         <h3>Precision Machining</h3>
         <p>Global-standard precision machining brought to your site, meeting the highest quality benchmarks on components large and small.</p>
-        <div class="ph" data-label="Photo — CNC / machining detail"></div>
+        <div class="ph" data-label="Photo: CNC / machining detail"></div>
       </div>
       <div class="cap-step" data-num="05" data-title="Custom<br>Manufacturing">
         <div class="k">Built to spec</div>
         <h3>Custom Manufacturing</h3>
-        <p>Bespoke fabrication and manufacturing tailored to your project — wherever you are, whatever the challenge.</p>
-        <div class="ph" data-label="Photo — fabrication workshop"></div>
+        <p>Bespoke fabrication and manufacturing tailored to your project. Wherever you are, whatever the challenge.</p>
+        <div class="ph" data-label="Photo: fabrication workshop"></div>
       </div>
     </div>
   </div>
@@ -188,14 +250,17 @@
 
 <section class="quote" data-screen-label="Testimonial">
   <div class="wrap quote-card reveal">
-    <blockquote>"Our performance as a team has been <span class="accent">exceptional</span> — the commitment from all disciplines is what made our shutdown so much easier to manage. None of this would have been possible without their tireless effort."</blockquote>
-    <div class="by"><b>Brian Mthimkhulu</b><span>Area Manager, Mechanical Maintenance</span></div>
+    <blockquote>"Our performance as a team has been <span class="accent">exceptional</span>. The commitment from all disciplines is what made our shutdown so much easier to manage. None of this would have been possible without their tireless effort."</blockquote>
+    <div class="by">
+      <div class="by-ava">BM</div>
+      <div><b>Brian Mthimkhulu</b><span>Area Manager, Mechanical Maintenance</span></div>
+    </div>
   </div>
 </section>
 
 <section class="clients" data-screen-label="Clients">
   <div class="clients-inner">
-    <div class="lead">Trusted by 20+ companies in more than 5 countries</div>
+    <div class="lead">Trusted by 20+ companies across more than 5 countries</div>
     <div class="marquee">
       <div class="marquee-row" id="logoRow1"></div>
       <div class="marquee-row r2" id="logoRow2"></div>
@@ -206,10 +271,21 @@
 <!-- ============ CH.8 CTA + FOOTER ============ -->
 <section class="cta" id="contact" data-screen-label="CTA">
   <div class="cta-bg"></div>
+  <div class="cta-grid-tex"></div>
   <div class="wrap">
     <h2>Let's build<br>something.</h2>
-    <p>Ready to partner with a team that treats safety, quality and on-time delivery as the baseline — not the goal?</p>
-    <a class="btn" href="https://prommac.com/contact/">Partner with Prommac <span class="arrow">→</span></a>
+    <p>Ready to partner with a team where safety, quality and on-time delivery are the baseline, not the goal?</p>
+    <div class="cta-actions">
+      <a class="btn" href="https://prommac.com/contact/">Partner with Prommac <span class="arrow">→</span></a>
+      <a class="btn-outline" href="tel:+27105942081">Call directly</a>
+    </div>
+    <div class="cta-emergency">
+      <div class="emerg-label"><strong>Emergency Response</strong>24/7 available</div>
+      <div class="cta-nums">
+        <a class="emerg-num" href="tel:+27828734119">+27 82 873 4119</a>
+        <a class="emerg-num" href="tel:+27824582296">+27 82 458 2296</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,7 +293,12 @@
   <div class="foot-grid">
     <div class="foot-brand">
       <div class="brand"><span class="dot"></span>PROMMAC</div>
-      <p>A complete suite of industrial services — reviving the past, maintaining the present, building the future.</p>
+      <p>A complete suite of industrial services: reviving the past, maintaining the present, building the future.</p>
+      <div class="foot-certs">
+        <span class="foot-cert">ISO 9001</span>
+        <span class="foot-cert">OHSAS 18001</span>
+        <span class="foot-cert">Est. 2005</span>
+      </div>
     </div>
     <div>
       <h5>Company</h5>
@@ -236,7 +317,7 @@
     <div>
       <h5>Contact</h5>
       <a class="foot-num" href="tel:+27105942081">+27 10 594 2081</a>
-      <span style="color:var(--muted);font-size:12px;font-family:var(--f-mono);letter-spacing:.1em;display:block;margin:14px 0 4px;">EMERGENCY 24/7</span>
+      <span style="color:var(--muted);font-size:11px;font-family:var(--f-mono);letter-spacing:.16em;text-transform:uppercase;display:block;margin:14px 0 4px;">Emergency 24/7</span>
       <a class="foot-num" href="tel:+27828734119">+27 82 873 4119</a>
       <a class="foot-num" href="tel:+27824582296">+27 82 458 2296</a>
     </div>
@@ -249,6 +330,18 @@
 
 <!-- Tweaks panel mount -->
 <div id="tweaks-root"></div>
+
+<template id="__bundler_thumbnail" data-bg-color="#07090c">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="600" cy="400" r="250" fill="none" stroke="#2bc4d4" stroke-width="3" opacity="0.5"/>
+    <ellipse cx="600" cy="400" rx="250" ry="95" fill="none" stroke="#2bc4d4" stroke-width="2.5" opacity="0.4"/>
+    <ellipse cx="600" cy="400" rx="95" ry="250" fill="none" stroke="#2bc4d4" stroke-width="2.5" opacity="0.4"/>
+    <circle cx="520" cy="330" r="9" fill="#2bc4d4"/>
+    <circle cx="690" cy="450" r="9" fill="#2bc4d4"/>
+    <circle cx="640" cy="300" r="7" fill="#2bc4d4"/>
+    <text x="600" y="690" text-anchor="middle" fill="#ecf1f4" font-family="Arial, sans-serif" font-weight="800" font-size="86" letter-spacing="10">GLOBAL</text>
+  </svg>
+</template>
 
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
