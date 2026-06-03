@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prommac — Industrial Services, Maintenance &amp; Turnarounds</title>
+<title>Prommac: Industrial Services, Maintenance &amp; Turnarounds</title>
 <meta name="description" content="Prommac is a global industrial services company delivering maintenance, shutdowns and turnarounds, complex projects and precision machining to petrochemical, oil &amp; gas, power and mining operations across 20+ countries since 2005." />
 <meta name="theme-color" content="#07090c" />
 <meta name="robots" content="index, follow" />
@@ -12,11 +12,11 @@
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prommac" />
-<meta property="og:title" content="Prommac — Industrial Services, Maintenance &amp; Turnarounds" />
+<meta property="og:title" content="Prommac: Industrial Services, Maintenance &amp; Turnarounds" />
 <meta property="og:description" content="Maintenance, shutdowns &amp; turnarounds, complex projects and precision machining for petrochemical, oil &amp; gas, power and mining. Operating across 20+ countries since 2005." />
 <meta property="og:url" content="https://prommac.com/" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Prommac — Industrial Services, Maintenance &amp; Turnarounds" />
+<meta name="twitter:title" content="Prommac: Industrial Services, Maintenance &amp; Turnarounds" />
 <meta name="twitter:description" content="Global industrial services: maintenance, turnarounds, complex projects and precision machining. Operating since 2005." />
 
 <!-- Favicon (inline SVG: petrol-teal mark) -->
@@ -25,13 +25,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-type="industrial" data-vibe="precision">
+<body>
 
 <!-- Skip navigation (accessibility) -->
-<a class="skip-nav" href="#top">Skip to main content</a>
+<a class="skip-nav" href="#main">Skip to main content</a>
 
 <div class="scroll-prog" id="scrollProg"></div>
 
@@ -61,13 +61,16 @@
   <a href="#contact"      class="nav-mobile-cta nav-mobile-link">Contact us</a>
 </div>
 
+<main id="main">
+<h1 class="sr-only">Prommac: global industrial services. Maintenance, shutdowns and turnarounds, complex projects and precision machining for petrochemical, oil and gas, power and mining operations across more than 20 countries since 2005.</h1>
+
 <!-- ============ CH.1 HERO ============ -->
 <section class="hero" id="top" data-screen-label="Hero">
   <div class="hero-stage">
     <div class="hero-bg"></div>
     <div class="grid-tex"></div>
-    <div class="hero-globe" id="heroGlobe"></div>
-    <div class="hero-coords" id="heroCoords"></div>
+    <div class="hero-globe" id="heroGlobe" aria-hidden="true"></div>
+    <div class="hero-coords" id="heroCoords" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <div class="hero-weare" id="heroWeare">We&nbsp;&nbsp;are</div>
@@ -153,7 +156,7 @@
       </div>
     </div>
     <div class="globe-wrap">
-      <div class="globe" id="globe"></div>
+      <div class="globe" id="globe" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -321,6 +324,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer data-screen-label="Footer">
   <div class="foot-grid">
@@ -350,7 +354,7 @@
     <div>
       <h5>Contact</h5>
       <a class="foot-num" href="tel:+27105942081">+27 10 594 2081</a>
-      <span style="color:var(--muted);font-size:11px;font-family:var(--f-mono);letter-spacing:.16em;text-transform:uppercase;display:block;margin:14px 0 4px;">Emergency 24/7</span>
+      <span class="foot-emerg-label">Emergency 24/7</span>
       <a class="foot-num" href="tel:+27828734119">+27 82 873 4119</a>
       <a class="foot-num" href="tel:+27824582296">+27 82 458 2296</a>
     </div>

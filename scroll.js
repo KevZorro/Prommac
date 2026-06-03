@@ -413,7 +413,16 @@
     updateReveals();
   }
 
-  window.addEventListener("scroll", frame, { passive: true });
+  // Coalesce scroll events into one frame() per animation frame. Avoids running
+  // the layout-reading update path multiple times between paints (scroll can fire
+  // more than once per frame), which otherwise causes layout thrashing.
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { frame(); ticking = false; });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", function () { vh = window.innerHeight; readMotion(); frame(); });
 
   // Keep globe halos pulsing at idle (throttled to sections near viewport)
