@@ -577,15 +577,10 @@ section { position: relative; }
   background: var(--bg); padding: 28px 24px; min-height: 220px;
   display: flex; flex-direction: column; justify-content: space-between;
   position: relative; overflow: hidden; cursor: default;
-  opacity: 0; transform: translateY(24px);
-  transition:
-    background .3s ease,
-    opacity .55s var(--ease),
-    transform .55s var(--ease);
+  transition: background .3s ease;
 }
 /* Subtle alternating depth */
 .ind-cell:nth-child(even) { background: var(--bg-2); }
-.ind-cell.in { opacity: 1; transform: none; }
 
 /* Bottom accent bar on hover */
 .ind-cell::before {
@@ -713,10 +708,8 @@ section { position: relative; }
 
 .why-item {
   background: var(--bg); padding: 32px 30px; display: flex; gap: 20px;
-  opacity: 0; transform: translateY(20px);
-  transition: opacity .6s, transform .6s, background .25s;
+  transition: background .25s;
 }
-.why-item.in  { opacity: 1; transform: none; }
 .why-item:hover { background: var(--bg-2); }
 .why-item:nth-child(even) { background: var(--bg-2); }
 .why-item:nth-child(even):hover { background: var(--bg-3); }
@@ -953,6 +946,21 @@ footer {
   transition: opacity .8s var(--ease), transform .8s var(--ease);
 }
 .reveal.in { opacity: 1; transform: none; }
+
+/* ============================================================
+   MOTION LAYER (Anime.js) — pre-animation hidden states.
+   Gated behind html.anim-on, which animations.js adds ONLY after a
+   successful module load with motion enabled. If the module fails to
+   load or motion is reduced, the class is never set and all of this
+   content stays fully visible. Animation targets transform + opacity.
+   ============================================================ */
+html.anim-on .ind-cell { opacity: 0; transform: translateY(22px); }
+html.anim-on .why-item { opacity: 0; transform: translateY(20px); }
+html.anim-on .trust-bar .t-label { opacity: 0; }
+html.anim-on .cta h2,
+html.anim-on .cta .wrap > p,
+html.anim-on .cta-actions .btn,
+html.anim-on .cta-actions .btn-outline { opacity: 0; }
 
 /* ============================================================
    REDUCED MOTION — stop autonomous animation, keep content visible

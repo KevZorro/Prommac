@@ -261,8 +261,7 @@
       h.setAttribute("r", (5.5 + 5 * (1 - pulse)).toFixed(2));
     });
     if (globeRot) globeRot.setAttribute("transform", "rotate(" + (p * 60 + performance.now() / 220) + " 100 100)");
-    var rcp = easeOut(clamp(p / 0.45, 0, 1));
-    for (var rc = 0; rc < reachCounters.length; rc++) renderCounter(reachCounters[rc], rcp);
+    // Reach counters are owned by animations.js (Anime.js count-up on enter).
   }
 
   /* ---------- INDUSTRIES grid ---------- */
@@ -374,8 +373,9 @@
   }
 
   var heroCounters  = [].slice.call(document.querySelectorAll(".hero-ticker [data-count]"));
-  var reachCounters = [].slice.call(document.querySelectorAll(".reach-stats [data-count]"));
-  var reveals = [].slice.call(document.querySelectorAll(".reveal, .ind-cell, .why-item"));
+  // Reveals: only the generic .reveal targets remain here. Industries cards and
+  // the Why list are revealed by animations.js (Anime.js staggered, on enter).
+  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
 
   function inView(el, frac) {
     var r = el.getBoundingClientRect();
